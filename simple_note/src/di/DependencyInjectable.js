@@ -14,11 +14,18 @@ define(["require", "exports", './DependencyInjector'], function (require, export
             enumerable: true,
             configurable: true
         });
-        Object.defineProperty(DependencyInjectable.prototype, "preference", {
+        Object.defineProperty(DependencyInjectable.prototype, "storage", {
             // application services getters
             //get api() : AdminApi {
             //	return this.di.get('api');
             //}
+            get: function () {
+                return this.di.get('storage');
+            },
+            enumerable: true,
+            configurable: true
+        });
+        Object.defineProperty(DependencyInjectable.prototype, "preference", {
             get: function () {
                 return this.di.get('preference');
             },
@@ -28,13 +35,6 @@ define(["require", "exports", './DependencyInjector'], function (require, export
         Object.defineProperty(DependencyInjectable.prototype, "toaster", {
             get: function () {
                 return this.di.get('toaster');
-            },
-            enumerable: true,
-            configurable: true
-        });
-        Object.defineProperty(DependencyInjectable.prototype, "modal", {
-            get: function () {
-                return this.di.get('modal');
             },
             enumerable: true,
             configurable: true

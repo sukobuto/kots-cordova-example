@@ -4,36 +4,37 @@
 	<meta charset="utf-8"/>
 	<meta name="format-detection" content="telephone=no"/>
 	<meta name="msapplication-tap-highlight" content="no"/>
-	<!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-	<meta name="viewport"
-				content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi"/>
 
-	<link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css"/>
+	<!-- Sets initial viewport load and disables zooming  -->
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+	<!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
 	<link rel="stylesheet" href="lib/fontawesome/css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="lib/ratchet/dist/css/ratchet.min.css"/>
+	<link rel="stylesheet" href="lib/toastr/toastr.min.css"/>
 	<link rel="stylesheet" href="css/whirl.css"/>
-	<link rel="stylesheet" href="/admin/css/datepicker.css"/>
 	<link rel="stylesheet" type="text/css" href="css/index.css"/>
 	<title>Simple Note</title>
 	
 	<script src="lib/jquery/dist/jquery.js"></script>
-	<script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="lib/ratchet/dist/js/ratchet.min.js"></script>
 	<script src="lib/knockout/dist/knockout.js"></script>
 	<script src="lib/knockout.punches/knockout.punches.min.js"></script>
 	<script src="lib/knockout-validation/Dist/knockout.validation.min.js"></script>
-	<script src="lib/knockout-validation/Localization/ja-JP.js"></script>
+	<script src="js/knockout-validation.ja-JP.js"></script>
 	<script src="lib/knockout-else/dist/knockout-else.js"></script>
 	<script src="lib/jquery-ui/jquery-ui.min.js"></script>
 	<script src="lib/knockout-es5/dist/knockout-es5.min.js"></script>
 	<script src="lib/knockout-sortable/build/knockout-sortable.min.js"></script>
 	<script src="js/linq.min.js"></script>
-	<script src="js/jquery.toaster.js"></script>
 	<script src="lib/jquery.caret/dist/jquery.caret-1.5.2.min.js"></script>
+	<script src="lib/toastr/toastr.min.js"></script>
 	<script src="lib/routie/dist/routie.min.js"></script>
 	<script src="lib/moment/moment.js"></script>
 	<script src="lib/moment/locale/ja.js"></script>
-	<script src="js/moment-datepicker.min.js"></script>
-	<script src="js/moment-datepicker-ko.js"></script>
-	<script src="lib/knockstrap/build/knockstrap.js"></script>
 	<script src="js/ko.customize.js"></script>
 </head>
 <body>
@@ -52,7 +53,6 @@
 			 data-bind="component:{ name:page.componentId, params:page }">
 	</div>
 	<!--/ko-->
-	<modal params="option:modal"></modal>
 	
 </div>
 <script type="text/javascript" src="cordova.js"></script>

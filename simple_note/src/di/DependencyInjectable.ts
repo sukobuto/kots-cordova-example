@@ -1,4 +1,5 @@
 import DependencyInjector = require('./DependencyInjector');
+import Storage = require('services/LocalStorageAdapter');
 import Preference = require('../services/Preference');
 import Toaster = require('../services/Toaster');
 import Modal = require('../parts/modal/Modal');
@@ -23,15 +24,15 @@ class DependencyInjectable {
 	//	return this.di.get('api');
 	//}
 	
+	get storage():Storage {
+		return this.di.get('storage');
+	}
+	
 	get preference():Preference {
 		return this.di.get('preference');
 	}
 	
 	get toaster():Toaster {
 		return this.di.get('toaster');
-	}
-	
-	get modal():Modal {
-		return this.di.get('modal');
 	}
 }

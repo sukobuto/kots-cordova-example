@@ -1,0 +1,48 @@
+<header class="bar bar-nav">
+	<h1 class="title">Simple Note</h1>
+</header>
+
+<div class="content">
+	<div class="content-padded">
+		<form data-bind="with: note">
+			<input type="text" placeholder="タイトル" value="{{ title }}"/>
+			<textarea rows="10" value="{{ body }}"></textarea>
+			<button class="btn btn-positive btn-block"
+							data-bind="click: $parent.save, disable: $parent.saving">
+				保存して閉じる {{#if $parent.saving}}<i class="fa fa-spinner fa-spin"></i>{{/if}}
+			</button>
+		</form>
+	</div>
+</div>
+
+<nav class="bar bar-tab">
+	<a class="tab-item" href="#" data-bind="click: cancel">
+		<span class="icon icon-left"></span>
+		<span class="tab-label">Cancel</span>
+	</a>
+	<a class="tab-item" href="#removeModal">
+		<span class="icon icon-trash"></span>
+		<span class="tab-label">Delete</span>
+	</a>
+</nav>
+
+<div id="removeModal" class="modal">
+	<header class="bar bar-nav">
+		<a class="icon icon-close pull-right" href="#removeModal"></a>
+		<h1 class="title">削除</h1>
+	</header>
+	<div class="content">
+		<p class="content-padded" data-bind="with: note">
+			{{ title }} を削除します。<br>
+			よろしいですか?
+		</p>
+
+		<form>
+			<button class="btn btn-positive btn-block"
+							data-bind="click: remove, disable: saving">
+				はい {{#if saving}}<i class="fa fa-spinner fa-spin"></i>{{/if}}
+			</button>
+			<a class="btn" href="#removeModal">キャンセル</a>
+		</form>
+	</div>
+</div>

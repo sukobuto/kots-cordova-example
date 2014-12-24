@@ -20,7 +20,7 @@ class LocalStorageAdapter implements StorageAdapter {
 	
 	private read(className) {
 		var items = JSON.parse(localStorage.getItem(className));
-		if (typeof items === 'array') return items;
+		if (Array.isArray(items)) return items;
 		return [];
 	}
 	

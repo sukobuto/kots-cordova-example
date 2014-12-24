@@ -1,9 +1,0 @@
-<div class="form-group" data-bind="css:{ 'has-error': validation().hasError(field_name) }">
-	<label data-bind="css:{ 'necessary-field': necessary }">{{ title }}</label>
-	<input type="text" class="form-control" value="{{ field }}" placeholder="{{ placeholder }}"
-				 data-bind="enabled: enabled"/>
-	{{#if description}}
-	<span class="help-block">{{ description }}</span>
-	{{/if}}
-	<span class="help-block text-danger">{{ validation().getError(field_name) }}</span>
-</div>

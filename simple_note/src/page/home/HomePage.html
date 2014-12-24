@@ -1,4 +1,20 @@
-<header>
+<header class="bar bar-nav">
 	<h1 class="title">Simple Note</h1>
 </header>
 
+<div class="content">
+	<ul class="table-view" data-bind="foreach: notes">
+		<li class="table-view-cell">
+			<a class="navigate-right" href="#" data-bind="click: $parent.edit">
+				{{ title }}
+			</a>
+		</li>
+	</ul>
+</div>
+
+<nav class="bar bar-tab">
+	<a class="tab-item" href="#" data-bind="click: add">
+		<span class="icon icon-edit"></span>
+		<span class="tab-label">Create New</span>
+	</a>
+</nav>

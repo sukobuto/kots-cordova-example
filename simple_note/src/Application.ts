@@ -2,10 +2,10 @@
 import DependencyInjector = require('di/DependencyInjector');
 import Injectable = require('di/DependencyInjectable');
 import Shell = require('./Shell');
+import Storage = require('services/LocalStorageAdapter');
 import Toaster = require('services/Toaster');
 import Preference = require('services/Preference');
 import Modal = require('parts/modal/Modal');
-export=Application;
 
 class Application extends Injectable {
 	
@@ -23,8 +23,8 @@ class Application extends Injectable {
 
 	public declareServices() : DependencyInjector {
 		var di = DependencyInjector.factoryDefault();
+		di.set('storage', () => new Storage(), true);
 		di.set('toaster', () => new Toaster(), true);
-		di.set('modal', () => new Modal(), true);
 		return di;
 	}
 	
@@ -50,10 +50,5 @@ class Application extends Injectable {
 KnockoutElse.init();  // knockout-else    : https://github.com/brianmhunt/knockout-else
 ko.punches.enableAll(); // knockout-punches : https://github.com/mbest/knockout.punches
 
-$(() => {
-	var app = new Application();
-	window['app'] = app; //for Console Debug.
-	ko.applyBindings(app);
-	app.initialize();
-});
-
+export var app = new Application();
+app.initialize();

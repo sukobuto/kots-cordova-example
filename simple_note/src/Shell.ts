@@ -3,7 +3,6 @@
 import Injectable = require('di/DependencyInjectable');
 import Page = require('page/Page');
 
-import MenuItem = require('parts/MenuItem');
 export = Shell;
 
 interface Route {
@@ -24,7 +23,6 @@ class Shell extends Injectable {
 	public routeMap : any = null;
 	public page : Page = null;
 	public menuId : string = null;
-	public modal = this.modal;
 
 	constructor(){
 		super();
@@ -71,7 +69,7 @@ class Shell extends Injectable {
 			},
 			{
 				path: 'edit/:id',
-				handler: (id) => this.transit('edit', { id: id })
+				handler: (id) => this.transit('edit', { id: +id })
 			},
 		];
 	}
