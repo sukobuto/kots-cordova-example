@@ -24,3 +24,7 @@ interface ToasterParameter {
 interface JQueryStatic {
 	toaster(ToasterParameter);
 }
+
+declare var page: {
+	(path:string, ...callback1:Array<(ctx?:any, next?:()=>void)=>void>):void
+};

@@ -1,4 +1,4 @@
-
+/// <reference path="../references.d.ts" />
 import Component = require('../Component');
 export = Page;
 
@@ -31,7 +31,7 @@ class Page extends Component {
 	}
 	
 	public static transfer(url:string):void {
-		routie(url);
+		page(url);
 	}
 
 }

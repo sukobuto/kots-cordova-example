@@ -34,16 +34,13 @@ class Shell extends Injectable {
 		this.routeMap = Enumerable.from(routes)
 			.where(r => r.name != null)
 			.toObject(r => r.name, r => r);
-		routie(
-			<{ [x: string]: Function; }>Enumerable.from(routes)
-				.toObject(r => r.path, r => r.handler)
-		);
+		routes.forEach(r => page(r.path, r.handler));
 		return this;
 	}
 	
 	public load() {
 		$('#splash').remove();
-		routie(window.location.hash);
+		page(window.location.hash);
 	}
 
 	public transit(name : string, context : any) : void {
@@ -59,17 +56,17 @@ class Shell extends Injectable {
 				page: require('page/home/HomePage').factory,
 				nav: { label: 'Home', icon: 'folder' },
 				path: '',
-				handler: () => this.transit('home', {})
+				handler: (ctx) => this.transit('home', ctx)
 			},
 			{
 				name: 'edit',
 				page: require('page/note/EditPage').factory,
 				path: 'add',
-				handler: () => this.transit('edit', {})
+				handler: (ctx) => this.transit('edit', ctx)
 			},
 			{
 				path: 'edit/:id',
-				handler: (id) => this.transit('edit', { id: +id })
+				handler: (ctx) => this.transit('edit', ctx)
 			},
 		];
 	}

@@ -32,7 +32,7 @@ define(["require", "exports", '../Component'], function (require, exports, Compo
             throw new Error('factory method is not implemented.');
         };
         Page.transfer = function (url) {
-            routie(url);
+            page(url);
         };
         return Page;
     })(Component);

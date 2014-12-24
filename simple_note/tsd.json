@@ -26,9 +26,6 @@
 		"node/node.d.ts": {
 			"commit": "974747ee99bbd087bac5e5647405101139519963"
 		},
-		"routie/routie.d.ts": {
-			"commit": "974747ee99bbd087bac5e5647405101139519963"
-		},
 		"knockout.validation/knockout.validation.d.ts": {
 			"commit": "bd0833a22eb1c4e4a963068d4e2550fe866399d1"
 		},
