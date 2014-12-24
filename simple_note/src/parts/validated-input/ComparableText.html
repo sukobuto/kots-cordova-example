@@ -1,0 +1,20 @@
+<div class="form-group" data-bind="css:{ 'has-error': validation().hasError(field_name) }">
+	<label data-bind="css:{ 'necessary-field': necessary }">{{ title }}</label>
+	<div class="input-group">
+		<div class="input-group-btn" data-bind="foreach: compare_options">
+			<label class="btn"
+						 data-bind="css:{
+								  						'btn-default': $parent.compare_field() != value,
+								  						'active btn-primary': $parent.compare_field() == value }">
+				<input type="radio" style="display: none;" value="{{ value }}"
+							 data-bind="checked: $parent.compare_field"/>
+				<span data-bind="text: label"></span>
+			</label>
+		</div>
+		<input type="text" class="form-control" value="{{ text_field }}" placeholder="{{ placeholder }}"/>
+	</div>
+	{{#if description}}
+	<span class="help-block">{{ description }}</span>
+	{{/if}}
+	<span class="help-block text-danger">{{ validation().getError(field_name) }}</span>
+</div>

@@ -1,0 +1,13 @@
+<div class="form-group" data-bind="css:{ 'has-error': validation().hasError(field_name) }">
+	<label data-bind="css:{ 'necessary-field': necessary }">{{ title }}</label>
+	<input type="text" class="form-control" placeholder="{{ placeholder }}"
+				 data-bind="datepicker: field,
+				 						datepickerOptions: {
+				 							dataType: 'format',
+				 							format: format
+				 						}"/>
+	{{#if description}}
+	<span class="help-block">{{ description }}</span>
+	{{/if}}
+	<span class="help-block text-danger">{{ validation().getError(field_name) }}</span>
+</div>

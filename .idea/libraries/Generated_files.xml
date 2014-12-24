@@ -1,0 +1,45 @@
+<component name="libraryTable">
+  <library name="Generated files" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/simple_note/src/page/home/HomePage.js" />
+        <item url="file://$PROJECT_DIR$/simple_note/src/page/PartialViewModel.js" />
+        <item url="file://$PROJECT_DIR$/simple_note/src/parts/Validation.js" />
+        <item url="file://$PROJECT_DIR$/simple_note/src/page/Page.js" />
+        <item url="file://$PROJECT_DIR$/simple_note/src/Component.js" />
+        <item url="file://$PROJECT_DIR$/simple_note/src/parts/TabPage.js" />
+        <item url="file://$PROJECT_DIR$/simple_note/src/parts/modal/Modal.js" />
+        <item url="file://$PROJECT_DIR$/simple_note/src/parts/pager/Pager.js" />
+        <item url="file://$PROJECT_DIR$/simple_note/src/parts/ValidatedInput.js" />
+        <item url="file://$PROJECT_DIR$/simple_note/src/services/StorageAdapter.js" />
+        <item url="file://$PROJECT_DIR$/simple_note/src/services/LocalStorageAdapter.js" />
+        <item url="file://$PROJECT_DIR$/simple_note/src/di/DependencyInjector.js" />
+        <item url="file://$PROJECT_DIR$/simple_note/src/di/DependencyInjectable.js" />
+        <item url="file://$PROJECT_DIR$/simple_note/src/services/ApiBase.js" />
+        <item url="file://$PROJECT_DIR$/simple_note/src/model/Note.js" />
+        <item url="file://$PROJECT_DIR$/simple_note/src/services/Toaster.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/simple_note/src/model/LocalStorageEntity.js" />
+      <root url="file://$PROJECT_DIR$/simple_note/src/model/LocalStorageEntity.js" />
+      <root url="file://$PROJECT_DIR$/simple_note/src/page/Page.js" />
+      <root url="file://$PROJECT_DIR$/simple_note/src/parts/Validation.js" />
+      <root url="file://$PROJECT_DIR$/simple_note/src/page/PartialViewModel.js" />
+      <root url="file://$PROJECT_DIR$/simple_note/src/page/home/HomePage.js" />
+      <root url="file://$PROJECT_DIR$/simple_note/src/parts/TabPage.js" />
+      <root url="file://$PROJECT_DIR$/simple_note/src/Component.js" />
+      <root url="file://$PROJECT_DIR$/simple_note/src/parts/modal/Modal.js" />
+      <root url="file://$PROJECT_DIR$/simple_note/src/parts/pager/Pager.js" />
+      <root url="file://$PROJECT_DIR$/simple_note/src/services/StorageAdapter.js" />
+      <root url="file://$PROJECT_DIR$/simple_note/src/parts/ValidatedInput.js" />
+      <root url="file://$PROJECT_DIR$/simple_note/src/services/LocalStorageAdapter.js" />
+      <root url="file://$PROJECT_DIR$/simple_note/src/di/DependencyInjector.js" />
+      <root url="file://$PROJECT_DIR$/simple_note/src/di/DependencyInjectable.js" />
+      <root url="file://$PROJECT_DIR$/simple_note/src/services/ApiBase.js" />
+      <root url="file://$PROJECT_DIR$/simple_note/src/model/Note.js" />
+      <root url="file://$PROJECT_DIR$/simple_note/src/services/Toaster.js" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>

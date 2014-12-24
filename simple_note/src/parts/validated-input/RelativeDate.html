@@ -1,0 +1,15 @@
+<div class="form-group" data-bind="css:{ 'has-error': validation().hasError(field_name) }">
+	<label data-bind="css:{ 'necessary-field': necessary }" for="delivery_for_head">{{ title }}</label>
+	<div class="input-group" data-bind="with: field">
+		<input type="text" class="form-control text-right" id="delivery_for_head" value="{{ year }}"/>
+		<span class="input-group-addon input-group-addon-slim">年</span>
+		<input type="text" class="form-control text-right" value="{{ month }}"/>
+		<span class="input-group-addon input-group-addon-slim">月</span>
+		<input type="text" class="form-control text-right" value="{{ day }}"/>
+		<span class="input-group-addon input-group-addon-slim">日</span>
+	</div>
+	{{#if description}}
+	<span class="help-block">{{ description }}</span>
+	{{/if}}
+	<span class="help-block text-danger">{{ validation().getError(field_name) }}</span>
+</div>

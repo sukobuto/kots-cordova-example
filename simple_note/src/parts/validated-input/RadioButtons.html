@@ -1,0 +1,19 @@
+<div class="form-group" data-bind="css:{ 'has-error': validation().hasError(field_name) }">
+	<label data-bind="css:{ 'necessary-field': necessary }">{{ title }}</label>
+	<div class="form-group">
+		<div class="btn-group" data-bind="foreach: options">
+			<label class="btn"
+						 data-bind="css: {
+												'btn-default': $parent.field() !== value,
+												'active btn-primary': $parent.field() === value }">
+				<input type="radio" style="display: none;" name="{{ $parent.field_name }}"
+							 data-bind="value: value, checked: $parent.field"/>
+				{{#if $data.hasOwnProperty('icon') }}<i class="fa fa-{{ icon }}"></i> {{/if}}{{ label }}
+			</label>
+		</div>
+	</div>
+	{{#if description}}
+	<span class="help-block">{{ description }}</span>
+	{{/if}}
+	<span class="help-block text-danger">{{ validation().getError(field_name) }}</span>
+</div>
