@@ -9,7 +9,7 @@ class LocalStorageAdapter implements StorageAdapter {
 		var items = localStorage.getItem(className);
 		if (index) {
 			index++;
-		} else if (typeof items === 'array') {
+		} else if (Array.isArray(items)) {
 			index = Enumerable.from(items).max(item => item['id']) + 1;
 		} else {
 			index = 1;
